@@ -41,7 +41,6 @@ header{
 }
 
 
-
 .text-container{
     color: #FFFF1D;
     display: flex;
@@ -52,6 +51,7 @@ header{
     margin-left: 15vh;
     height: 100%;
     justify-content: space-between;
+  
     
    
 
@@ -73,6 +73,7 @@ header{
     font-style: italic;
     color: white;
     font-size:max(108px, 2vw);
+
 
 }
 
@@ -106,6 +107,8 @@ header{
     bottom: 100px;
     height: 80px;
     text-align: center;
+    left: -100%;
+    animation: animation-texts 1.5s forwards;
 }
 
 span{
@@ -123,12 +126,16 @@ span{
     width: 150px;
     height: 40px;
     cursor: pointer;
+   
 }
 
 .texts-apresentation{
 
    position: relative;
    top: 30%;
+   left: -100%;
+   animation: animation-texts 2s forwards;
+
 
 
 }
@@ -150,6 +157,14 @@ a:active{
     color: white;
     
 }
+
+@keyframes animation-texts {
+    to{
+        left: 0;
+    }
+    
+}
+
 
 
 /* main-container */
@@ -209,7 +224,6 @@ main{
 
 .text-container-main h1{
     font-family: 'amsterdan';
-    /* font-size: max(84px, 5vw); */
     font-weight: 500;
     font-style: italic;
     font-size: 5vw;
@@ -266,7 +280,6 @@ main{
 
 .black-div p{
     color: #ffff10;
-
     font-family: 'nue';
     font-weight: 900;
     font-style: italic;
@@ -319,7 +332,6 @@ main{
     margin: 70px  0 70px ;
     position: relative;
     bottom: 50px;
-  /* line-height:5em; */
  
 
 }
@@ -360,6 +372,8 @@ footer{
     width: 250px;
     margin: 0 0 0 10vw;
 
+
+
 }
 
 .social-medias{
@@ -368,6 +382,9 @@ footer{
     gap: 10px;
 }
 
+.social-medias img:active{
+    opacity: 0.5;
+}
 
 
 @media screen and (max-width:1448px) {

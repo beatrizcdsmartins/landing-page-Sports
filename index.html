@@ -49,7 +49,6 @@
 
             <div class="container-main" >
                 <img id="people" class="people" src="./sequencia_de_fotos_01.png" alt=""> 
-                <!-- <img id="people-mobile" class="mobile-main" src="./assets/main/sequencia_de_fotos_01_mobile.png" alt=""> -->
 
                 <div class="text-container-main">
 
@@ -93,8 +92,8 @@
     <footer>
         <img class="logo-footer" src="./assets/footer/logo.png" alt="logo-image">
         <div class="social-medias">
-            <a href=""><img src="./assets/footer/facebook.png" alt="facebook-icon"></a>
-            <a href=""><img src="./assets/footer/instagram.png" alt="instagram-icon"></a>
+            <a target="_blank" href="https://www.facebook.com/NakanoTenis"><img src="./assets/footer/facebook.png" alt="facebook-icon"></a>
+            <a target="_blank" href="https://www.instagram.com/nakanotenis/"><img src="./assets/footer/instagram.png" alt="instagram-icon"></a>
         </div>
     </footer>
  
@@ -127,7 +126,7 @@
     let indi = 0;
 
     botaoAnteriorMobile.addEventListener('click', function() {
-    indi = (indice - 1 + images.length) % images.length;
+    indi = (indi - 1 + images.length) % images.length;
     image.src = images[indi];
     });
 
