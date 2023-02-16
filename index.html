@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div class="text-container">
+            <div class="texts-apresentation">
+                <h2>A SALA DE AULA</h2>
+                <h2>PERFEITA TEM UMA</h2>
+                <h1>REDE NO MEIO<span>.</span></h1>
+                <p>APRENDA E APRIMORE SEU TÊNIS</p>
+                <p> NA MELHOR ACADEMIA DA REGIÃO.</p>
+            </div>
+
+            <div class="link">
+                <button class="meet-us-button">
+                    <a class="meet-us-link" href="#plans">CONHEÇA NOSSOS PLANOS</a>
+                  </button>
+            </div>
+         
+      
+        </div>
+    </header>
+
+    <main>
+        <div class="kid-adult-photos">
+            <img class="desktop" src="./assets/main/rapaz_e_Menina2.png" alt="">
+            <img class="mobile" src="./assets/main/rapaz_menina_mobile.png">
+            <img id="people-mobile" class="mobile" src="./sequencia_de_fotos_01_mobile.png">
+            <div class="button-arrow arrow-mobile">
+                <img id="before-mobile" class="button-svg" src="./assets/main/svg-left.svg" alt="">
+                <img id="after-mobile" class="button-svg" src="./assets/main/svg.svg" alt="">
+            </div>
+
+        </div>
+
+        <div class="images-footer-main">
+
+            <div class="container-main" >
+                <img id="people" class="people" src="./sequencia_de_fotos_01.png" alt=""> 
+                <!-- <img id="people-mobile" class="mobile-main" src="./assets/main/sequencia_de_fotos_01_mobile.png" alt=""> -->
+
+                <div class="text-container-main">
+
+                    <div class="box-2"> 
+                        <h1>POR QUE</h1>
+                        <h1> ESCOLHER</h1>
+                        <h1>A NAKANO?</h1>
+                    </div>
+
+                    <div class="button-arrow arrow-desktop">
+                        <img id="before" class="button-svg" src="./assets/main/svg-left.svg" alt="">
+                        <img id="after" class="button-svg" src="./assets/main/svg.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="black-div">
+        <p>DESCUBRA O EMOCIONANTE E DESAFIADOR MUNDO DO TÊNIS</p>
+        <p> EM UMA AULA EXPERIMENTAL, SEM COMPROMISSO!</p>
+    </div>
+
+    <div class="plans" id="plans">
+
+        <div class="title-plans">
+            <h1>PLANOS</h1>
+             <h1>PERSONALIZADOS</h1>
+        </div>
+       
+        <div class="scroll-container">
+            <img class="scroll-image" src="./assets/scroll/alto rendimento.png" alt="alto-rendimento">
+            <img class="scroll-image" src="./assets/scroll/aulas grupo.png" alt="aulas-em-grupo">
+            <img class="scroll-image" src="./assets/scroll/aulas particulares.png" alt="aulas-particulares">
+            <img class="scroll-image" src="./assets/scroll/locacao.png" alt="locacao-de-quadras">
+            <img class="scroll-image" src="./assets/scroll/tenis kids.png" alt="tenis-kids">
+            <img class="scroll-image" src="./assets/scroll/treinos especificos.png" alt="treinos-específicos">
+        </div>
+    </div>
+
+    <footer>
+        <img class="logo-footer" src="./assets/footer/logo.png" alt="logo-image">
+        <div class="social-medias">
+            <a href=""><img src="./assets/footer/facebook.png" alt="facebook-icon"></a>
+            <a href=""><img src="./assets/footer/instagram.png" alt="instagram-icon"></a>
+        </div>
+    </footer>
+ 
+</body>
+<script src="./menu.js"> </script>
+
+<script>
+    // mudança de troca de imagens - main (after/before)
+    const botaoAnterior = document.getElementById('before');
+    const botaoProximo = document.getElementById('after');
+    const imagem = document.getElementById('people');
+    const imagens = [ 'sequencia_de_fotos_02.png', 'sequencia_de_fotos_03.png', 'sequencia_de_fotos_04.png', 'sequencia_de_fotos_05.png','sequencia_de_fotos_01.png'];
+    let indice = 0;
+
+    botaoAnterior.addEventListener('click', function() {
+    indice = (indice - 1 + imagens.length) % imagens.length;
+    imagem.src = imagens[indice];
+    });
+
+    botaoProximo.addEventListener('click', function() {
+    indice = (indice + 1) % imagens.length;
+    imagem.src = imagens[indice];
+    });
+
+    //troca de imagens after-before (mobile)
+    const botaoAnteriorMobile = document.getElementById('before-mobile');
+    const botaoProximoMobile = document.getElementById('after-mobile');
+    const image = document.getElementById('people-mobile');
+    const images = [ 'sequencia_de_fotos_02_mobile.png', 'sequencia_de_fotos_03_mobile.png', 'sequencia_de_fotos_04_mobile.png', 'sequencia_de_fotos_05_mobile.png','sequencia_de_fotos_01_mobile.png'];
+    let indi = 0;
+
+    botaoAnteriorMobile.addEventListener('click', function() {
+    indi = (indice - 1 + images.length) % images.length;
+    image.src = images[indi];
+    });
+
+    botaoProximoMobile.addEventListener('click', function() {
+    indi = (indi + 1) % images.length;
+    image.src = images[indi];
+    });
+</script>
+</html>

@@ -1,0 +1,550 @@
+
+@font-face {
+    font-family:'amsterdan';
+    src: url('assets/fonts/NewAmsterdam-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'nue' ;
+    src: url('assets/fonts/UniNeue-BlackItalic.otf') format('opentype');
+    src: url('assets/fonts/UniNeue-ThinItalic.otf') format('opentype');
+    src: url('assets/fonts/UniNeue-HeavyItalic.otf') format('opentype') ; 
+}
+
+@font-face {
+    font-family:'nu' ;
+    src: url('assets/fonts/UniNeue-ThinItalic.otf') format('opentype'); 
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.mobile, .mobile-main{
+    display: none;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-content: center;
+    background-image: url(./assets/apresentation/fundo\ home2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+
+.text-container{
+    color: #FFFF1D;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 10vh ;
+    position: relative;
+    margin-left: 15vh;
+    height: 100%;
+    justify-content: space-between;
+    
+   
+
+}
+
+.text-container h2{
+    font-weight: 300;
+    font-family: 'nue';
+    font-style: italic;
+    font-size:max(45px, 2vw);
+    line-height: 100%;
+
+    
+}
+
+.text-container h1{
+    font-weight: 300;
+    font-family: 'amsterdan';
+    font-style: italic;
+    color: white;
+    font-size:max(108px, 2vw);
+
+}
+
+.text-container p, .meet-us-link{
+    font-weight:100;
+    font-family: 'nu';
+    font-style: italic;
+    letter-spacing: 1px;
+    font-size: 35px;
+    opacity: 0.7;
+}
+
+.meet-us-button a{
+    text-decoration: none;
+    color: #ffff10;
+}
+
+.meet-us-button{
+    border: solid 5px #ffff10;
+    border-radius: 44px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+}
+
+.link{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 100px;
+    height: 80px;
+    text-align: center;
+}
+
+span{
+    color: #ffff10;
+    font-size: 50px;
+}
+
+
+
+.meet-button{
+    background-color: black;
+    color: #ffff10;
+    border: solid #ffff10 1px;
+    border-radius: 30px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.texts-apresentation{
+
+   position: relative;
+   top: 30%;
+
+
+}
+
+ .texts-apresentation h1{
+    font-size:max(50px, 6vw);
+} 
+
+.texts-apresentation p{
+    font-size:max(30px, 1.8vw);
+
+} 
+
+.texts-apresentation h2{
+    font-size:max(45px, 2.5vw);
+}
+
+a:active{
+    color: white;
+    
+}
+
+
+/* main-container */
+
+main{
+    width: 100%;
+    position: relative;
+}
+
+.kid-adult-photos img{
+    width: 100%;
+}
+
+.texts-containers{
+    z-index: 200;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+
+   
+}
+
+.images-footer-main{
+    width: 100%;
+    background-image: url(./assets/main/fundo_amarelo.png);
+    background-size: cover;
+
+
+}
+ .people{
+    width: 100%;
+    position: relative;
+
+}
+
+.container-main{
+    display: flex;
+    position: relative;
+ 
+}
+
+
+.text-container-main{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 47%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  
+
+
+}
+
+.text-container-main h1{
+    font-family: 'amsterdan';
+    /* font-size: max(84px, 5vw); */
+    font-weight: 500;
+    font-style: italic;
+    font-size: 5vw;
+    line-height: 4vw;
+}
+
+.button-svg{
+    cursor: pointer;
+
+}
+
+.button-arrow img:active{
+    opacity: 0.5;
+}
+
+
+.button-arrow{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+
+}
+
+.arrow-mobile{
+    display: none;
+}
+
+.box-2 {
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.button-arrow img{
+    width:  1.5vw;
+}
+
+
+/*black-div*/
+
+.black-div{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+}
+
+.black-div p{
+    color: #ffff10;
+
+    font-family: 'nue';
+    font-weight: 900;
+    font-style: italic;
+    font-size: max(30px, 1vw);
+    text-align: center;
+}
+
+
+
+/* planos */
+
+.plans{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.scroll-container{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+    gap: 100px;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 40px;
+
+   
+}
+
+.scroll-container.scroll-direita{
+    transform: translateX(-100%);
+}
+
+.scroll-container::-webkit-scrollbar{
+    display: none;
+}
+
+.scroll-image:first-child{
+    position: relative;
+    margin: 0 100px ;
+}
+
+.title-plans{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 70px  0 70px ;
+    position: relative;
+    bottom: 50px;
+  /* line-height:5em; */
+ 
+
+}
+
+
+.title-plans h1{
+
+    font-family: 'amsterdan';
+    letter-spacing: 1px;
+    font-weight:500;
+    font-size: min(90px, 10vw);
+    margin: 0 0 0 10vw;
+  
+}
+
+
+.scroll-container img{
+    width: 35%;
+}
+
+
+
+
+
+/* footer */
+
+footer{
+    background-color: black;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+.logo-footer{
+    width: 250px;
+    margin: 0 0 0 10vw;
+
+}
+
+.social-medias{
+    margin: 0 0 0 10vw;
+    display: flex;
+    gap: 10px;
+}
+
+
+
+@media screen and (max-width:1448px) {
+  
+
+    .text-container{
+  
+        width: 40%;
+        margin: 0 30px;
+      
+    }
+
+    .texts-apresentation{
+  
+        position: relative;
+        top: 400px;
+   
+    }
+
+    .text-container h1 {
+       font-size: max(6vw, 90px);
+       line-height: 80%;
+
+    
+    }
+
+    .text-container p{
+        font-size: max(2vw, 20px) ;
+    }
+
+    .link a {
+        font-size: max(2vw, 20px);
+
+    }
+
+    .text-container h2{
+        font-size: max(3vw, 25px) ;
+        
+    }
+    
+    .link{
+        position: relative;
+        top: -20px;
+    }
+   
+    
+}
+
+
+@media screen and (max-width:750px) {
+
+    .arrow-mobile{
+        display: block;
+        position: absolute;
+        bottom: 27%;
+        left: 10%;
+    
+    }
+
+    .arrow-mobile img{
+        width: 20px;
+        margin: 0 20px;
+    }
+
+    .arrow-desktop{
+        display: none;
+    }
+
+
+  
+    header{
+        background-image: url(./assets/main/mobile_jogador.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+    }
+
+
+    .kid-adult-photos .desktop{
+        display: none;
+    }
+    
+    .kid-adult-photos .mobile{
+        display: block;
+    }
+    
+
+    .kid-adult-photos{
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+    }
+    
+    footer{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+
+    .logo-footer, .social-medias{
+        margin: 0;
+    }
+
+    .box-2, .people{
+        display: none;
+    }
+
+  
+
+    .black-div p{
+        padding: 0 40px;
+        font-size: max(4vw, 20px);
+    }
+ 
+    .scroll-container img{
+        width: max(100%);
+   
+    }
+
+    .title-plans h1{
+        font-size: max(50px, 10vw);
+    }
+
+    .scroll-image:first-child{
+        position: relative;
+        margin: 0 20px ;
+    }
+
+
+}
+
+
+@media screen and (max-width:620px) {
+
+     .text-container{
+      
+        width: 45%;
+        margin: 0 30px;
+        
+    }
+    
+    .texts-apresentation{
+  
+        position: relative;
+        top: 40%;
+   
+    }
+
+  
+
+    .text-container h1 {
+        font-size: max(6vw, 50px);
+      
+     
+     }
+
+     .text-container p{
+        font-size: max(2vw, 15px) ;
+    }
+
+    .text-container h2{
+        font-size: max(5vw, 25px) ;
+        
+    } 
+
+    .link a {
+        font-size: max(2vw, 15px);
+
+    }
+
+
+
+
+}
