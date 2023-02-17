@@ -108,6 +108,8 @@
     const imagens = [ 'sequencia_de_fotos_02.png', 'sequencia_de_fotos_03.png', 'sequencia_de_fotos_04.png', 'sequencia_de_fotos_05.png','sequencia_de_fotos_01.png'];
     let indice = 0;
 
+    
+
     botaoAnterior.addEventListener('click', function() {
     indice = (indice - 1 + imagens.length) % imagens.length;
     imagem.src = imagens[indice];
@@ -117,6 +119,8 @@
     indice = (indice + 1) % imagens.length;
     imagem.src = imagens[indice];
     });
+
+    
 
     //troca de imagens after-before (mobile)
     const botaoAnteriorMobile = document.getElementById('before-mobile');

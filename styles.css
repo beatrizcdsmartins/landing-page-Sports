@@ -137,7 +137,6 @@ span{
    animation: animation-texts 2s forwards;
 
 
-
 }
 
  .texts-apresentation h1{
@@ -519,8 +518,18 @@ footer{
         margin: 0 20px ;
     }
 
+    .link{
+        height: 15vw;
+    }
+
+
+
 
 }
+
+
+
+
 
 
 @media screen and (max-width:620px) {
@@ -563,5 +572,44 @@ footer{
 
 
 
+
+
+}
+
+
+
+@media screen and (max-width:350px) {
+
+
+    .text-container h1 {
+        font-size: max(6vw, 40px);
+      
+     
+     }
+
+     .text-container p{
+        font-size:3vw;
+    }
+
+    .text-container h2{
+        font-size: 4vw;
+        
+    } 
+
+    .link a {
+        font-size: max(2vw, 10px);
+
+    }
+
+    .link{
+       height: 20vw;
+    }
+
+    .title-plans h1{
+        font-size: 15vw;
+        
+    }
+
+   
 
 }
