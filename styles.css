@@ -249,9 +249,8 @@ main{
   
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-
+    padding-left: 32%;
+ 
 }
 
 .button-arrow img{
@@ -325,6 +324,7 @@ main{
     margin: 70px  0 70px ;
     position: relative;
     bottom: 50px;
+    padding-top: 2%;
  
 
 }
@@ -337,6 +337,7 @@ main{
     font-weight:500;
     font-size: min(90px, 10vw);
     margin: 0 0 0 10vw;
+    line-height: 80%;
 }
 
 .scroll-container img{
@@ -538,7 +539,7 @@ footer{
     }
 
   .link{
-    margin-bottom: 20%;
+    margin-bottom: 25%;
   }
 
 }
