@@ -46,15 +46,11 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-bottom: 10vh ;
+    margin-bottom: 10vh;
     position: relative;
     margin-left: 15vh;
     height: 100%;
     justify-content: space-between;
-  
-    
-   
-
 }
 
 .text-container h2{
@@ -97,6 +93,7 @@ header{
     width: 100%;
     height: 100%;
     background-color: black;
+    transition: background-color 0.3s ease-out;
 
 }
 
@@ -126,8 +123,10 @@ span{
     width: 150px;
     height: 40px;
     cursor: pointer;
+
    
 }
+
 
 .texts-apresentation{
 
@@ -150,11 +149,6 @@ span{
 
 .texts-apresentation h2{
     font-size:max(45px, 2.5vw);
-}
-
-a:active{
-    color: white;
-    
 }
 
 @keyframes animation-texts {
@@ -241,7 +235,7 @@ main{
 
 .button-arrow{
     display: flex;
-    gap: 20px;
+    gap: 100px;
     margin-bottom: 20px;
 
 }
@@ -343,17 +337,11 @@ main{
     font-weight:500;
     font-size: min(90px, 10vw);
     margin: 0 0 0 10vw;
-  
 }
-
 
 .scroll-container img{
     width: 35%;
 }
-
-
-
-
 
 /* footer */
 
@@ -370,9 +358,6 @@ footer{
 .logo-footer{
     width: 250px;
     margin: 0 0 0 10vw;
-
-
-
 }
 
 .social-medias{
@@ -386,28 +371,24 @@ footer{
 }
 
 
+
+
 @media screen and (max-width:1448px) {
   
-
     .text-container{
-  
         width: 40%;
         margin: 0 30px;
-      
+
     }
 
     .texts-apresentation{
-  
         position: relative;
         top: 400px;
-   
     }
 
     .text-container h1 {
        font-size: max(6vw, 90px);
        line-height: 80%;
-
-    
     }
 
     .text-container p{
@@ -420,27 +401,31 @@ footer{
     }
 
     .text-container h2{
-        font-size: max(3vw, 25px) ;
-        
+        font-size: max(3vw, 25px) ; 
     }
     
     .link{
         position: relative;
         top: -20px;
     }
-   
-    
 }
 
-
 @media screen and (max-width:750px) {
+
+    header{
+        background-image: url(./assets/main/mobile_jogador.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+    }
 
     .arrow-mobile{
         display: block;
         position: absolute;
         bottom: 27%;
         left: 10%;
-    
     }
 
     .arrow-mobile img{
@@ -452,18 +437,6 @@ footer{
         display: none;
     }
 
-
-  
-    header{
-        background-image: url(./assets/main/mobile_jogador.png);
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 100vh;
-    }
-
-
     .kid-adult-photos .desktop{
         display: none;
     }
@@ -472,12 +445,10 @@ footer{
         display: block;
     }
     
-
     .kid-adult-photos{
         width: 100%;
         background-repeat: no-repeat;
         background-size: contain;
-
     }
     
     footer{
@@ -485,9 +456,7 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
-       
     }
-
 
     .logo-footer, .social-medias{
         margin: 0;
@@ -496,8 +465,6 @@ footer{
     .box-2, .people{
         display: none;
     }
-
-  
 
     .black-div p{
         padding: 0 40px;
@@ -520,24 +487,26 @@ footer{
 
     .link{
         height: 15vw;
+        position: relative;
+        top:-1%;
     }
 
-
+    .meet-us-button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
 
 }
 
-
-
-
-
-
 @media screen and (max-width:620px) {
 
      .text-container{
-      
+  
         width: 45%;
-        margin: 0 30px;
+        margin: 0 30px; 
         
     }
     
@@ -547,8 +516,6 @@ footer{
         top: 40%;
    
     }
-
-  
 
     .text-container h1 {
         font-size: max(6vw, 50px);
@@ -570,9 +537,9 @@ footer{
 
     }
 
-
-
-
+  .link{
+    margin-bottom: 20%;
+  }
 
 }
 
@@ -602,7 +569,8 @@ footer{
     }
 
     .link{
-       height: 20vw;
+       height: 15vw;
+       top: -20px;
     }
 
     .title-plans h1{
