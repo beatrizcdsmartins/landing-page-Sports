@@ -37,7 +37,11 @@ header{
     background-image: url(./assets/apresentation/fundo\ home2.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+ 
+    background-position-x: center;
+    background-position-y: top;
+
+
 }
 
 
@@ -285,6 +289,7 @@ main{
 
 /* planos */
 
+ 
 .plans{
     display: flex;
     flex-direction: column;
@@ -298,13 +303,18 @@ main{
     overflow-x: scroll;
     transform: translateX(0);
     transition: transform 0.3s ease;
-    gap: 100px;
+    gap: 70px;
     margin-bottom: 20px;
     position: relative;
     bottom: 40px;
 
    
 }
+
+.hidden {
+    visibility: hidden;
+    pointer-events: none;
+  }
 
 
 .scroll-container.scroll-direita{
@@ -317,7 +327,7 @@ main{
 
 .scroll-image:first-child{
     position: relative;
-    margin: 0 100px ;
+    margin: 0 0 0 100px ;
 }
 
 .title-plans{
@@ -343,17 +353,10 @@ main{
     line-height: 80%;
 }
 
+
 .scroll-container img{
-    width: 35%;
-
-    animation: moveImages 4s steps(20);
-
- 
+    width: 100%;
 }
-
-
-
-
 
 /* footer */
 
@@ -386,6 +389,11 @@ footer{
 
 
 @media screen and (max-width:1448px) {
+
+
+    header{
+        background-position: center center;
+    }
   
     .text-container{
         width: 40%;
@@ -425,12 +433,19 @@ footer{
         position: relative;
         top: -20px;
     }
+
+    .scroll-container img{
+        width: 90%;
+    }
+    
 }
+
 
 @media screen and (max-width:750px) {
 
     header{
         background-image: url(./assets/main/mobile_jogador.png);
+        background-position: center center;
         background-position: top;
         background-repeat: no-repeat;
         background-size: cover;
