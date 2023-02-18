@@ -235,8 +235,9 @@ main{
 
 .button-arrow{
     display: flex;
-    gap: 100px;
-    margin-bottom: 20px;
+    gap: 50px;
+    margin-bottom:5%;
+    padding-right: 27%;
 
 }
 
@@ -254,8 +255,9 @@ main{
 }
 
 .button-arrow img{
-    width:  1.5vw;
+    width:  1.2vw;
 }
+
 
 
 /*black-div*/
@@ -304,6 +306,7 @@ main{
    
 }
 
+
 .scroll-container.scroll-direita{
     transform: translateX(-100%);
 }
@@ -342,7 +345,15 @@ main{
 
 .scroll-container img{
     width: 35%;
+
+    animation: moveImages 4s steps(20);
+
+ 
 }
+
+
+
+
 
 /* footer */
 
@@ -381,6 +392,11 @@ footer{
         margin: 0 30px;
 
     }
+
+    .button-arrow{
+        padding-right: 20%;
+    }
+    
 
     .texts-apresentation{
         position: relative;
@@ -471,11 +487,7 @@ footer{
         padding: 0 40px;
         font-size: max(4vw, 20px);
     }
- 
-    .scroll-container img{
-        width: max(100%);
-   
-    }
+
 
     .title-plans h1{
         font-size: max(50px, 10vw);
