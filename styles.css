@@ -17,6 +17,14 @@
 }
 
 
+body,html{
+    overflow-x: hidden;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -348,13 +356,10 @@ main{
     position: relative;
     bottom: 50px;
     padding-top: 2%;
- 
-
 }
 
 
 .title-plans h1{
-
     font-family: 'amsterdan';
     letter-spacing: 1px;
     font-weight:500;
@@ -423,6 +428,86 @@ main{
     align-items: center;
     justify-content: center;
 }
+
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 40px;
+    line-height: 1;
+    opacity: .75;
+    color: rgb(0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    z-index: 200;   
+}
+
+
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: -26px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    /* left: 97%; */
+    right: 1%;
+
+}
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.slick-prev{
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    z-index: 2000;
+ 
+    
+}
+
+.slick-next:before {
+    font-family: 'slick';
+    font-size: 40px;
+    line-height: 1;
+    opacity: .75;
+    color: rgb(0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    z-index: 200;
+    position: relative;
+    margin-left: -15px;
+
+}
+
+
+.carousel{
+    width: 100%;
+}
+
+.carousel img{
+    position: relative;
+    margin: 0 auto;
+    width: 80%; 
+}
+
+
 /* footer */
 
 footer{
@@ -507,6 +592,13 @@ footer{
 
 
 @media screen and (max-width:750px) {
+
+    .carousel{
+        display: none;
+    }
+    .slider-mobile{
+        display: block;
+    }
 
     header{
         background-image: url(./assets/main/mobile_jogador.png);
@@ -600,9 +692,7 @@ footer{
     bottom: 0;
    }
 
-    .slider-mobile{
-        display: block;
-    }
+
 
     .slider-desktop{
         display: none;
