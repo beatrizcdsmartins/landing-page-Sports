@@ -314,40 +314,6 @@ main{
     justify-content: space-around;
 }
 
-
-.scroll-container{
-    display: flex;
-    width: 100%;
-    overflow-x: scroll;
-    transform: translateX(0);
-    transition: transform 0.3s ease;
-    gap: 70px;
-    margin-bottom: 20px;
-    position: relative;
-    bottom: 40px;
-
-}
-
-
-.hidden {
-    visibility: hidden;
-    pointer-events: none;
-}
-
-
-.scroll-container.scroll-direita{
-    transform: translateX(-100%);
-}
-
-.scroll-container::-webkit-scrollbar{
-    display: none;
-}
-
-.scroll-image:first-child{
-    position: relative;
-    margin: 0 0 0 100px ;
-}
-
 .title-plans{
     display: flex;
     flex-direction: column;
@@ -367,17 +333,6 @@ main{
     margin: 0 0 0 10vw;
     line-height: 80%;
 }
-
-
-.scroll-container{
-    display: flex;
-    justify-content: center;
-}
-
-.scroll-container img{
-    width: 80%;
-}
-
 
 .slider{
     transition: all 0.5s;
@@ -399,8 +354,6 @@ main{
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {
-    font-family: swiper-icons;
-    font-size: var(--swiper-navigation-size);
     text-transform: none!important;
     letter-spacing: 0;
     font-variant: initial;
@@ -744,16 +697,11 @@ footer{
     justify-content: center;
     position: relative;
     bottom: 5vmin;
-
 }
 
   .swiper-button-next:after, .swiper-button-prev:after {
-    font-family: swiper-icons;
     font-size: 5vmin;
-  
-}
-  
-
+  }
 }
 
 
@@ -763,22 +711,18 @@ footer{
 
     .text-container h1 {
         font-size: max(6vw, 40px);
-      
-     
-     }
+    }
 
      .text-container p{
         font-size:3vw;
     }
 
     .text-container h2{
-        font-size: 4vw;
-        
+        font-size: 4vw;  
     } 
 
     .link a {
-        font-size: max(2vw, 10px);
-
+      font-size: max(2vw, 10px);
     }
 
     .link{
@@ -787,10 +731,6 @@ footer{
     }
 
     .title-plans h1{
-        font-size: 12vw;
-        
+        font-size: 12vw;  
     }
-
-   
-
 }

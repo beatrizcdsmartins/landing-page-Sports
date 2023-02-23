@@ -85,10 +85,6 @@
             <h1>PLANOS</h1>
              <h1>PERSONALIZADOS</h1>
         </div>
-    
-      
-    
-        </main>
 
         <div class="carousel">
             <div><img src="./imagem_dupla_001.png" alt=""></div>
@@ -206,42 +202,41 @@
 
     // Slider Botões (Planos)
 
-const btnAnterior = document.getElementById('anterior-botao');
-const btnProximo = document.getElementById('proximo-botao');
-const img = document.getElementById('dupla');
-const imgs = ['imagem_dupla_02.png', 'imagem_dupla_03.png', 'imagem_dupla_01.png'];
-let indic = 0;
+    const btnAnterior = document.getElementById('anterior-botao');
+    const btnProximo = document.getElementById('proximo-botao');
+    const img = document.getElementById('dupla');
+    const imgs = ['imagem_dupla_02.png', 'imagem_dupla_03.png', 'imagem_dupla_01.png'];
+    let indic = 0;
 
-btnAnterior.addEventListener('click', function() {
-  img.classList.add("slide");
-  setTimeout(function() {
-    indic = (indic - 1 + imgs.length) % imgs.length;
-    const newImg = new Image();
-    newImg.src = imgs[indic];
-    newImg.classList.add("slide-enter");
-    newImg.addEventListener("load", function() {
-      img.src = newImg.src;
-      img.classList.remove("slide");
-      newImg.classList.remove("slide-enter");
+    btnAnterior.addEventListener('click', function() {
+    img.classList.add("slide");
+    setTimeout(function() {
+        indic = (indic - 1 + imgs.length) % imgs.length;
+        const newImg = new Image();
+        newImg.src = imgs[indic];
+        newImg.classList.add("slide-enter");
+        newImg.addEventListener("load", function() {
+        img.src = newImg.src;
+        img.classList.remove("slide");
+        newImg.classList.remove("slide-enter");
+        });
+    }, 500);
     });
-  }, 500);
-});
 
-btnProximo.addEventListener('click', function() {
-  img.classList.add("slide");
-  setTimeout(function() {
-    indic = (indic + 1) % imgs.length;
-    const newImg = new Image();
-    newImg.src = imgs[indic];
-    newImg.classList.add("slide-enter");
-    newImg.addEventListener("load", function() {
-      img.src = newImg.src;
-      img.classList.remove("slide");
-      newImg.classList.remove("slide-enter");
+    btnProximo.addEventListener('click', function() {
+    img.classList.add("slide");
+    setTimeout(function() {
+        indic = (indic + 1) % imgs.length;
+        const newImg = new Image();
+        newImg.src = imgs[indic];
+        newImg.classList.add("slide-enter");
+        newImg.addEventListener("load", function() {
+        img.src = newImg.src;
+        img.classList.remove("slide");
+        newImg.classList.remove("slide-enter");
+        });
+    }, 500);
     });
-  }, 500);
-});
-
-
+    
 </script>
 </html>
