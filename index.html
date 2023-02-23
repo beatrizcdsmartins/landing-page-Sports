@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=div, initial-scale=1.0">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apresentation/logo_topo_site.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/apresentation/logo_topo_site3.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/apresentation/logo_topo_site3.png">
@@ -80,17 +81,78 @@
             <h1>PLANOS</h1>
              <h1>PERSONALIZADOS</h1>
         </div>
+    
+        <main class="extern-container-slider slider-desktop">
+            <div class="swiper slider-desktop">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <img src="./imagem_dupla_01.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <img src="./imagem_dupla_02.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <img src="./imagem_dupla_03.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </main>
+
+        <main class="extern-container-slider slider-mobile">
+            <div class="swiper slider-mobile">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <img src="./assets/scroll/alto rendimento.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <img src="./assets/scroll/aulas grupo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <img src="./assets/scroll/aulas particulares.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <img src="./assets/scroll/locacao.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <img src="./assets/scroll/tenis kids.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <img src="./assets/scroll/treinos especificos.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </main>
+
+       
        
   
-            <div class="scroll-container">
-                <img class="scroll-image" src="./assets/scroll/alto rendimento.png" alt="alto-rendimento">
-                <img class="scroll-image" src="./assets/scroll/aulas grupo.png" alt="aulas-em-grupo">
-                <img class="scroll-image" src="./assets/scroll/aulas particulares.png" alt="aulas-particulares">
-                <img class="scroll-image" src="./assets/scroll/locacao.png" alt="locacao-de-quadras">
-                <img class="scroll-image" src="./assets/scroll/tenis kids.png" alt="tenis-kids">
-                <img class="scroll-image" src="./assets/scroll/treinos especificos.png" alt="treinos-específicos">
-            </div>
-     
+    
+      
     </div>
 
     <footer>
@@ -100,6 +162,12 @@
             <a target="_blank" href="https://www.instagram.com/nakanotenis/"><img src="./assets/footer/instagram.png" alt="instagram-icon"></a>
         </div>
     </footer>
+
+
+    
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="./slider-script.js"></script>
+ 
  
 </body>
 <script src="./menu.js"> </script>
@@ -142,6 +210,47 @@
     indi = (indi + 1) % images.length;
     image.src = images[indi];
     });
+
+    
+
+    // Slider Botões (Planos)
+
+const btnAnterior = document.getElementById('anterior-botao');
+const btnProximo = document.getElementById('proximo-botao');
+const img = document.getElementById('dupla');
+const imgs = ['imagem_dupla_02.png', 'imagem_dupla_03.png', 'imagem_dupla_01.png'];
+let indic = 0;
+
+btnAnterior.addEventListener('click', function() {
+  img.classList.add("slide");
+  setTimeout(function() {
+    indic = (indic - 1 + imgs.length) % imgs.length;
+    const newImg = new Image();
+    newImg.src = imgs[indic];
+    newImg.classList.add("slide-enter");
+    newImg.addEventListener("load", function() {
+      img.src = newImg.src;
+      img.classList.remove("slide");
+      newImg.classList.remove("slide-enter");
+    });
+  }, 500);
+});
+
+btnProximo.addEventListener('click', function() {
+  img.classList.add("slide");
+  setTimeout(function() {
+    indic = (indic + 1) % imgs.length;
+    const newImg = new Image();
+    newImg.src = imgs[indic];
+    newImg.classList.add("slide-enter");
+    newImg.addEventListener("load", function() {
+      img.src = newImg.src;
+      img.classList.remove("slide");
+      newImg.classList.remove("slide-enter");
+    });
+  }, 500);
+});
+
 
 </script>
 </html>

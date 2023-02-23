@@ -24,7 +24,7 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
-.mobile, .mobile-main{
+.mobile, .mobile-main, .slider-mobile{
     display: none;
 }
 
@@ -262,6 +262,16 @@ main{
     width:  1.2vw;
 }
 
+.button-slider{
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vmin;
+    position: relative;
+    bottom: 200px;
+    cursor: pointer;
+}
+
 
 
 /*black-div*/
@@ -308,13 +318,13 @@ main{
     position: relative;
     bottom: 40px;
 
-   
 }
+
 
 .hidden {
     visibility: hidden;
     pointer-events: none;
-  }
+}
 
 
 .scroll-container.scroll-direita{
@@ -354,10 +364,65 @@ main{
 }
 
 
+.scroll-container{
+    display: flex;
+    justify-content: center;
+}
+
 .scroll-container img{
+    width: 80%;
+}
+
+
+.slider{
+    transition: all 0.5s;
+}
+#dupla{
+    transition: all 0.5s;
+}
+
+.slide {
+    transform: translateX(-100%);
+  }
+
+  .slide-enter {
+    transform: translateX(100%);
+  }
+
+  :root {
+    --swiper-theme-color: #000000;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none!important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+    font-weight: bolder;
+}
+
+
+.extern-container-slider{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 6vmin;
+}
+
+.extern-container-slider img{
     width: 100%;
 }
 
+.swiper-slide{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* footer */
 
 footer{
@@ -531,6 +596,18 @@ footer{
 
 @media screen and (max-width:620px) {
 
+   .title-plans{
+    bottom: 0;
+   }
+
+    .slider-mobile{
+        display: block;
+    }
+
+    .slider-desktop{
+        display: none;
+    }
+
      .text-container{
   
         width: 45%;
@@ -568,6 +645,24 @@ footer{
   .link{
     margin-bottom: 25%;
   }
+
+  .extern-container-slider{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    bottom: 5vmin;
+
+}
+
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: 5vmin;
+  
+}
+  
 
 }
 
