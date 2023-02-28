@@ -764,3 +764,19 @@ footer{
 
 }
 
+@media screen and (max-height:600px) and (max-width:1280px){
+
+    .texts-apresentation{
+        top:15%;
+    }
+
+    header{
+       background-position: top;
+  
+    }
+    
+
+}
+
+
+
