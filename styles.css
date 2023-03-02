@@ -32,7 +32,7 @@ body,html{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-.mobile, .mobile-main, .slider-mobile{
+.mobile, .mobile-main, .slider-mobile, .address-container-mobile{
     display: none;
 }
 
@@ -462,6 +462,12 @@ footer{
     height: 250px;
     width: 100%;
     display: flex;
+    justify-content: space-between;
+   
+}
+
+.social-logo-container{
+    display: flex;
     flex-direction: column;
     gap: 30px;
     justify-content: center;
@@ -476,16 +482,74 @@ footer{
     margin: 0 0 0 10vw;
     display: flex;
     gap: 10px;
+    text-align: center;
 }
 
 .social-medias img:active{
     opacity: 0.5;
 }
 
+address{
+    color: #FFFF1D;
+    font-size: max(2.7vmin, 20px);
+    font-family: 'nu';
+    letter-spacing: 1px;
+    font-style:bold;
+
+}
+
+.address-container{
+    padding: 60px 30px;
+    margin: 0 10vw 0 0;
+
+}
+
 
 
 
 @media screen and (max-width:1448px) {
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .social-logo-container{
+
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .social-medias,  .logo-footer{
+        margin: 0;
+    }
+
+  
+
+    
+
+
+    .address-container{
+        display: none;
+    }
+
+    .address-container-mobile{
+        display: block;
+        text-align: center;
+        padding-bottom: 20px;
+    
+    }
+
+    address{
+        font-size: max(2vmin, 20px);
+    }
+
 
     .meet-us-button a{
         font-size:min(4vmin, 25px);
@@ -547,6 +611,10 @@ footer{
 
 
 @media screen and (max-width:750px) {
+
+    address{
+        font-size: max(2.5vmin, 15px);
+    }
 
     .carousel{
         display: none;
@@ -777,6 +845,13 @@ footer{
     
 
 }
+
+@media screen and (max-height:800px) and (max-width:600px){
+    .texts-apresentation{
+        top:40%;
+    }
+}
+
 
 
 
