@@ -98,9 +98,6 @@ header{
 .meet-us-button a{
     text-decoration: none;
     color: #ffff10;
-    
-
-
 }
 
 .meet-us-button{
@@ -150,7 +147,6 @@ span{
 
 .texts-apresentation p{
     font-size:max(30px, 1.8vw);
-
 } 
 
 .texts-apresentation h2{
@@ -508,6 +504,24 @@ address{
 
 
 @media screen and (max-width:1448px) {
+
+    .texts-apresentation p{
+        font-size:max(30px, 1.8vw);
+        font-family: "nu";
+        opacity: 1;
+        font-weight: bolder;
+    
+    } 
+
+    .meet-us-button a{
+        text-decoration: none;
+        color: #ffff10;
+        font-family: "nu";
+        opacity: 1;
+        font-weight: bold;
+        
+    
+    }
 
     footer{
         flex-direction: column;
